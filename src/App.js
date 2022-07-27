@@ -8,6 +8,7 @@ import Error from './Error';
 import SignIn from './singin';
 import SignUp from './signUp';
 import Stripe from './stripeExample';
+import Socket from './socket';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/signup' component={SignUp} />
         <Route path='/signin' component={SignIn} />
         <Route path='/stripe' component={Stripe} />
+        <Route path='/socket' component={Socket} />
         <Route path='/' component={dashboard} />
         <Route component={Error} />
       </Switch>

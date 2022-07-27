@@ -44,6 +44,13 @@ const NavBar = () => {
         <Grid container item xs={12} lg={12} md={12} className={classes.Grid} style={{ marginBottom: '8px' }}>
             <Grid item xs={12} sm={12} lg={12} md={12} >
                 <Paper className={classes.paper}>
+
+                    <NavLink style={{ textDecoration: 'none' }} to='/socket'>
+                        <Button variant="contained" color="">
+                            Socket
+                        </Button>
+                    </NavLink> &nbsp; &nbsp; &nbsp; &nbsp;
+
                     <NavLink style={{ textDecoration: 'none' }} to='/cart' onClick={(e) => { get_cart_item() }}>
                         <Badge color="secondary" badgeContent={count} max={999}>
                             <AddShoppingCartIcon />
@@ -56,8 +63,8 @@ const NavBar = () => {
                                 SignUp
                             </Button>
                         </NavLink> &nbsp; &nbsp; &nbsp; &nbsp;
-                        <NavLink style={{ textDecoration: 'none' }} to ='/signin' >
-                            <Button variant="contained" color="primary" onClick= {()=> history.push('/signin')}>
+                        <NavLink style={{ textDecoration: 'none' }} to='/signin' >
+                            <Button variant="contained" color="primary" onClick={() => history.push('/signin')}>
                                 SignIn
                             </Button>
                         </NavLink> </> : <NavLink style={{ textDecoration: 'none' }} to='/' onClick={(e) => { logOut() }}>
